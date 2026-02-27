@@ -1,12 +1,10 @@
-- Hi, I’m Tanbir 👋
-- I’m an Electrical Engineering graduate student specializing in Power Systems.
-- I enjoy working on power system analysis, planning, and renewable energy integration.
-- My focus: power system studies for modern electric grids (power flow, constraints, integration studies).
+-- 👋 Hi, I’m Tanbir Rahman
+- ⚡ Electrical Engineering graduate student specializing in **Power Systems**
+- 🔍 Interested in **power system analysis**, **planning**, and **renewable integration**
+- 🛠️ Focus: **power system studies for modern electric grids** (power flow / constraints / reporting)
+- 🧰 Tools: PSS®E • ETAP • MATLAB/Simulink • Python • Excel • Power BI
+- 📍 Calgary, AB
+- 🔗 LinkedIn: <your link>
+- ✉️ Email: <your email>
 
-- Currently working on:
-  - Study automation / reporting workflows (Python)
-  - Clean documentation + reproducible results
-
-- Reach me:
-  - LinkedIn: <paste link>
-  - Email: <paste email>
+![](https://komarev.com/ghpvc/?username=Tanbir2&label=Profile%20views)

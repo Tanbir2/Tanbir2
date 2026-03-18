@@ -6,6 +6,6 @@
 - Tools: PSS®E • ETAP • PSCAD • MATLAB/Simulink • Python • AutoCAD • Excel • Power BI • ArcGIS
 
 [Read My Journey](https://tanbir2.github.io/Tanbir2/)
-[Download My Resume](https://github.com)
+[Download My Resume](https://github.com/Tanbir2/Tanbir2/blob/main/Resume.pdf)
 
 ![](https://komarev.com/ghpvc/?username=Tanbir2&label=Profile%20views)

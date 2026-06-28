@@ -27,7 +27,7 @@ nav {
     text-align: center;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 10;
 }
 
 nav a {
@@ -35,48 +35,24 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: var(--accent);
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    /* Reverted to a clean gradient for now */
+    padding: 80px 20px 50px;
     background: linear-gradient(to right, #0f172a, #1e293b);
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
-
-/* Uncomment this when you are ready to add your profile picture */
-/*
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid var(--accent);
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-*/
 
 .hero h1 {
     font-size: 40px;
     margin-bottom: 10px;
-    margin-top: 0;
 }
 
 .hero p {
     font-size: 18px;
-    margin-top: 0;
+    margin: 0;
 }
 
 .btn {
@@ -87,11 +63,31 @@ nav a:hover {
     color: white;
     text-decoration: none;
     border-radius: 6px;
-    transition: background 0.3s;
 }
 
-.btn:hover {
-    background: #1d4ed8;
+/* BRAND BAND - full-bleed signature graphic, sits flush under the hero */
+.brand-band {
+    position: relative;
+    background: #12151c;
+    line-height: 0;
+}
+
+.brand-band img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* fades the top of the image into the hero's navy so there's no hard seam */
+.brand-band::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: linear-gradient(to bottom, #1e293b 0%, rgba(30, 41, 59, 0) 100%);
+    pointer-events: none;
 }
 
 /* SECTIONS */
@@ -122,6 +118,110 @@ h2 {
     gap: 20px;
 }
 
+.grid .card {
+    margin-bottom: 0;
+}
+
+/* PROFESSIONAL DEVELOPMENT CARDS */
+.dev-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.dev-card h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    line-height: 1.35;
+    color: var(--primary);
+}
+
+.dev-provider {
+    font-style: italic;
+    color: #64748b;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* UPDATES TIMELINE */
+.timeline {
+    position: relative;
+    padding-left: 28px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: #cbd5e1;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px #eff6ff;
+}
+
+.timeline-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.timeline-date {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.timeline-tag {
+    font-size: 11px;
+    padding: 2px 9px;
+    border-radius: 20px;
+    background: #eff6ff;
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.timeline-item h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+    color: var(--primary);
+}
+
+.timeline-item p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.5;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -129,10 +229,14 @@ footer {
     background: var(--primary);
     color: white;
 }
+
+@media (max-width: 600px) {
+    .hero h1 { font-size: 30px; }
+    nav a { display: inline-block; margin: 4px 8px; font-size: 14px; }
+}
 </style>
 
 </head>
-
 <body>
 
 <!-- NAV -->
@@ -154,6 +258,57 @@ footer {
     <a href="https://github.com/Tanbir2" class="btn" target="_blank">View GitHub</a>
 </div>
 
+<!-- UPDATES -->
+<section id="updates">
+    <h2>Latest Updates</h2>
+
+    <div class="timeline-item">
+            <div class="timeline-meta">
+                <span class="timeline-date">June 2026</span>
+                <span class="timeline-tag">Milestone</span>
+            </div>
+            <h3>Recived WES and Applied EIT with APEGA</h3>
+            <p>Now, my B.sc is WES Evaluated</p>
+        </div>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-meta">
+                <span class="timeline-date">June 2026</span>
+                <span class="timeline-tag">Milestone</span>
+            </div>
+            <h3>Completed MEng Convocation</h3>
+            <p>Officially graduated with my Master of Engineering in Electrical and Computer Engineering from the University of Calgary, specializing in sustainable power systems.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-meta">
+                <span class="timeline-date">June 2026</span>
+                <span class="timeline-tag">Milestone</span>
+            </div>
+            <h3>Completed Training: Faults and Sequence Networks: The Roots of Protection and Relay Decision-Making</h3>
+            <p>Connecting theory directly to relay operation, understanding event records, identify fault signatures, and interpret why relays operate </p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-meta">
+                <span class="timeline-date">June 2026</span>
+                <span class="timeline-tag">Availability</span>
+            </div>
+            <h3>Open to EIT-Level Opportunities</h3>
+            <p>Actively looking for entry-level and EIT positions</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-meta">
+                <span class="timeline-date">May 2026</span>
+                <span class="timeline-tag">Insight</span>
+            </div>
+            <h3>Studying Temporary Overvoltage (TOV)</h3>
+            <p>Went deep on arrester rating selection, and TOV behaviour in islanded DER/inverter systems.</p>
+        </div>
+    </div>
+</section>
 <!-- ABOUT -->
 <section id="about">
     <h2>My Journey</h2>
@@ -212,40 +367,58 @@ footer {
     </div>
 </section>
 
-<!-- DEVELOPMENT -->
+<!-- PROFESSIONAL DEVELOPMENT -->
 <section id="development">
     <h2>Professional Development</h2>
-    <div class="card">
-        <ul>
-            <li>Fundamentals of EMT Studies, IBRs and Large Loads – <em>Electro Mentors</em></li>
-            <li>EMT Software Tool Automation: Power System Modeling and Simulation – <em>Electro Mentors</em></li>
-            <li><strong>IBRs Modeling and Special Studies Guide with EMT Software Tool</strong> – <em>Electro Mentors</em></li>
-            <li>Simulation and Modeling of HVDC (VSC Focused) – <em>Electro Mentors</em></li>
-            <li>EMT of Transmission Lines – <em>Electro Mentors</em></li>
-            <li>Load Flow and Stability Analysis – <em>Electro Mentors</em></li>
-        </ul>
+    <div class="grid">
+        <div class="card dev-card">
+            <span class="dev-tag">Completed</span>
+            <h3>Fundamentals of EMT Studies, IBRs and Large Loads</h3>
+            <p class="dev-provider">Electro Mentors</p>
+        </div>
+
+        <div class="card dev-card">
+            <span class="dev-tag">Completed</span>
+            <h3>EMT Software Tool Automation: Power System Modeling and Simulation</h3>
+            <p class="dev-provider">Electro Mentors</p>
+        </div>
+
+        <div class="card dev-card">
+            <span class="dev-tag">Completed</span>
+            <h3>IBRs Modeling and Special Studies Guide with EMT Software Tool</h3>
+            <p class="dev-provider">Electro Mentors</p>
+        </div>
+
+        <div class="card dev-card">
+            <span class="dev-tag">Completed</span>
+            <h3>Simulation and Modeling of HVDC (VSC Focused)</h3>
+            <p class="dev-provider">Electro Mentors</p>
+        </div>
+
+        <div class="card dev-card">
+            <span class="dev-tag">Completed</span>
+            <h3>EMT of Transmission Lines</h3>
+            <p class="dev-provider">Electro Mentors</p>
+        </div>
+
+        <div class="card dev-card">
+            <span class="dev-tag">Completed</span>
+            <h3>Load Flow and Stability Analysis</h3>
+            <p class="dev-provider">Electro Mentors</p>
+        </div>
     </div>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section id="certifications">
-    <h2>Certifications & Registrations</h2>
+    <h2>Certifications &amp; Registrations</h2>
     <div class="grid">
         <div class="card">
             <h3>Engineer-in-Training (EIT)</h3>
-            <p>Eligible for Registration</p>
+            <p>Applied with APEGA</p>
         </div>
-        
-        <!-- Add more certifications here by copying the block below -->
-        <!-- 
-        <div class="card">
-            <h3>Certification Name</h3>
-            <p>Issuing Organization - Year</p>
-        </div>
-        -->
     </div>
 </section>
-
 <!-- PROJECTS -->
 <section id="projects">
     <h2>Projects</h2>

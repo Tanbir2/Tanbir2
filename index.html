@@ -27,6 +27,7 @@ nav {
     text-align: center;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 nav a {
@@ -34,23 +35,48 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
+    /* Reverted to a clean gradient for now */
     background: linear-gradient(to right, #0f172a, #1e293b);
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+/* Uncomment this when you are ready to add your profile picture */
+/*
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+*/
 
 .hero h1 {
     font-size: 40px;
     margin-bottom: 10px;
+    margin-top: 0;
 }
 
 .hero p {
     font-size: 18px;
+    margin-top: 0;
 }
 
 .btn {
@@ -61,6 +87,11 @@ nav a {
     color: white;
     text-decoration: none;
     border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
 }
 
 /* SECTIONS */
@@ -109,14 +140,17 @@ footer {
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#development">Development</a>
+    <a href="#certifications">Certifications</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
+    <!-- Uncomment the line below when you have your image file ready -->
+    <!-- <img src="YOUR_PROFILE_PICTURE.jpg" alt="Tanbir Rahman" class="profile-pic"> -->
     <h1>Tanbir Rahman</h1>
-    <p>Electrical Engineer | Power Systems | Renewable Energy</p>
+    <p>Electrical Engineer | Power Systems | Project Coordination | Renewable Energy</p>
     <a href="https://github.com/Tanbir2" class="btn" target="_blank">View GitHub</a>
 </div>
 
@@ -146,7 +180,7 @@ footer {
         </p>
         
         <p>
-        My goal is to build a career in power systems—particularly in transmission, protection, and system operations—while contributing to the development of reliable and sustainable energy infrastructure through intelligent technologies and automation.
+        My goal is to build a diverse and dynamic engineering career—spanning transmission, protection, system operations, design, and project coordination—while contributing to the development of reliable and sustainable energy infrastructure through intelligent technologies and automation.
         </p>
     </div>
 </section>
@@ -158,12 +192,12 @@ footer {
     <div class="grid">
         <div class="card">
             <h3>Power Systems</h3>
-            <p>Power system Modelling, Load Flow, Short Circuit, Arc Flash, Stability Studies(steady state, transient, voltage and frequency), Congestion Studies, Protection Co-ordination</p>
+            <p>Power system Modelling, Load Flow, Short Circuit, Arc Flash, Stability Studies (steady state, transient, voltage and frequency), Congestion Studies, Protection Co-ordination</p>
         </div>
 
         <div class="card">
             <h3>Simulation</h3>
-            <p>PSSE, PSCAD, ETAP, MATLAB, Simulink,</p>
+            <p>PSSE, PSCAD, ETAP, MATLAB, Simulink</p>
         </div>
 
         <div class="card">
@@ -173,7 +207,7 @@ footer {
 
         <div class="card">
             <h3>Tools</h3>
-            <p>AutoCAD, Power BI, Latex, Bluebeam, Origin, Microsoft Office</p>
+            <p>AutoCAD, Power BI, LaTeX, Bluebeam, Origin, Microsoft Office</p>
         </div>
     </div>
 </section>
@@ -190,6 +224,25 @@ footer {
             <li>EMT of Transmission Lines – <em>Electro Mentors</em></li>
             <li>Load Flow and Stability Analysis – <em>Electro Mentors</em></li>
         </ul>
+    </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+    <h2>Certifications & Registrations</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Engineer-in-Training (EIT)</h3>
+            <p>Eligible for Registration</p>
+        </div>
+        
+        <!-- Add more certifications here by copying the block below -->
+        <!-- 
+        <div class="card">
+            <h3>Certification Name</h3>
+            <p>Issuing Organization - Year</p>
+        </div>
+        -->
     </div>
 </section>
 

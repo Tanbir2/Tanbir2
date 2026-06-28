@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tanbir Rahman | Electrical Engineer | Power Systems | Renewable Energy</title>
+<title>Tanbir Rahman | Electrical Engineer| Power Systems | Renewable Energy</title>
 
 <style>
 :root {
@@ -65,7 +65,7 @@ nav a {
     border-radius: 6px;
 }
 
-/* BRAND BAND - full-bleed signature graphic, sits flush under the hero */
+/* BRAND BAND */
 .brand-band {
     position: relative;
     background: #12151c;
@@ -78,7 +78,6 @@ nav a {
     height: auto;
 }
 
-/* fades the top of the image into the hero's navy so there's no hard seam */
 .brand-band::before {
     content: '';
     position: absolute;
@@ -222,6 +221,185 @@ h2 {
     line-height: 1.5;
 }
 
+/* JOURNEY TIMELINE STYLE */
+.journey-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.journey-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 60px;
+}
+
+.journey-container *,
+.journey-container *::before,
+.journey-container *::after {
+    box-sizing: inherit;
+}
+
+.journey-container .timeline {
+    position: relative;
+    padding-left: 0;
+}
+
+.journey-container .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #e5e7eb;
+}
+
+.journey-container .timeline-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.journey-container .timeline-item::before {
+    display: none;
+}
+
+.journey-container .timeline-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 16px;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 2px solid #e5e7eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    z-index: 10;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.journey-container .timeline-content-wrapper {
+    width: 50%;
+    position: relative;
+}
+
+.journey-container .left-side {
+    padding-right: 48px;
+    text-align: left;
+    left: -25%;
+}
+
+.journey-container .right-side {
+    padding-left: 48px;
+    text-align: left;
+    left: 25%;
+}
+
+.journey-container .timeline-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 20px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.journey-container .left-side .timeline-card {
+    float: right;
+}
+
+.journey-container .left-side .timeline-card::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -9px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #e5e7eb;
+}
+.journey-container .left-side .timeline-card::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    right: -7px;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid #f8f9fa;
+    z-index: 1;
+}
+
+.journey-container .right-side .timeline-card::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: -9px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #e5e7eb;
+}
+.journey-container .right-side .timeline-card::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: -7px;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid #f8f9fa;
+    z-index: 1;
+}
+
+.journey-container .timeline-card h3 {
+    margin: 0 0 4px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #111827;
+}
+
+.journey-container .timeline-card h4 {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #111827;
+}
+
+.journey-container .timeline-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.journey-container .timeline-date {
+    position: absolute;
+    top: 26px;
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.journey-container .left-side ~ .timeline-date {
+    left: 50%;
+    padding-left: 48px;
+}
+
+.journey-container .right-side ~ .timeline-date {
+    right: 50%;
+    padding-right: 48px;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -233,13 +411,54 @@ footer {
 @media (max-width: 600px) {
     .hero h1 { font-size: 30px; }
     nav a { display: inline-block; margin: 4px 8px; font-size: 14px; }
+
+    .journey-container .timeline::before {
+        left: 20px;
+        transform: none;
+    }
+
+    .journey-container .timeline-item {
+        justify-content: flex-start;
+        padding-left: 40px;
+    }
+
+    .journey-container .timeline-icon {
+        left: 0;
+        transform: none;
+    }
+
+    .journey-container .timeline-content-wrapper,
+    .journey-container .left-side,
+    .journey-container .right-side {
+        width: 100%;
+        left: 0;
+        padding: 0 0 0 0;
+    }
+
+    .journey-container .timeline-card {
+        max-width: 100%;
+        float: none !important;
+    }
+
+    .journey-container .left-side .timeline-card::before,
+    .journey-container .left-side .timeline-card::after,
+    .journey-container .right-side .timeline-card::before,
+    .journey-container .right-side .timeline-card::after {
+        display: none;
+    }
+
+    .journey-container .timeline-date {
+        position: static;
+        display: block;
+        margin-top: 10px;
+        padding: 0;
+    }
 }
 </style>
 
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -249,20 +468,17 @@ footer {
     <a href="#contact">Contact</a>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
-    <!-- Uncomment the line below when you have your image file ready -->
-    <!-- <img src="YOUR_PROFILE_PICTURE.jpg" alt="Tanbir Rahman" class="profile-pic"> -->
     <h1>Tanbir Rahman</h1>
     <p>Electrical Engineer | Power Systems | Renewable Energy</p>
     <a href="https://github.com/Tanbir2" class="btn" target="_blank">View GitHub</a>
 </div>
 
-<!-- UPDATES -->
 <section id="updates">
     <h2>Latest Updates</h2>
 
-    <div class="timeline-item">
+    <div class="timeline">
+        <div class="timeline-item">
             <div class="timeline-meta">
                 <span class="timeline-date">June 2026</span>
                 <span class="timeline-tag">Milestone</span>
@@ -271,7 +487,6 @@ footer {
             <p>Now, my B.sc is WES Evaluated</p>
         </div>
 
-    <div class="timeline">
         <div class="timeline-item">
             <div class="timeline-meta">
                 <span class="timeline-date">June 2026</span>
@@ -287,7 +502,7 @@ footer {
                 <span class="timeline-tag">Milestone</span>
             </div>
             <h3>Completed Training: Faults and Sequence Networks: The Roots of Protection and Relay Decision-Making</h3>
-            <p>Connecting theory directly to relay operation, understanding event records, identify fault signatures, and interpret why relays operate </p>
+            <p>Connecting theory directly to relay operation, understanding event records, identify fault signatures, and interpret why relays operate</p>
         </div>
 
         <div class="timeline-item">
@@ -309,7 +524,7 @@ footer {
         </div>
     </div>
 </section>
-<!-- ABOUT -->
+
 <section id="about">
     <h2>My Journey</h2>
 
@@ -329,18 +544,77 @@ footer {
         <p>
         Alongside my academic studies, I have built practical, industry-relevant skills using <strong>PSS®E, PSCAD™, ETAP, MATLAB/Simulink, Python, and AutoCAD</strong>. I have applied these tools in projects involving load flow analysis, fault studies, and data-driven power system modeling. One of my key achievements is developing an <strong>automated 8760-hour power system reliability and curtailment analysis framework</strong> using Python and PSS®E.
         </p>
-
-        <p>
-        Currently, I am focusing on the technical challenges of grid decarbonization, specifically in <strong>Weak Grid stability</strong> and <strong>Inverter-Based Resource (IBR) integration</strong>. I am exploring the gap between static planning and dynamic reality by developing Python-based automation frameworks for PSS®E and PSCAD™ and studying <strong>system-wide model validation</strong> to ensure that our digital twins accurately reflect real-world grid physics.
-        </p>
         
         <p>
         My goal is to build a diverse and dynamic engineering career—spanning transmission, protection, system operations, design, and project coordination—while contributing to the development of reliable and sustainable energy infrastructure through intelligent technologies and automation.
         </p>
+
+        <div class="journey-container">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content-wrapper left-side">
+                        <div class="timeline-card">
+                            <h3>Master of Engineering in Electrical & Computer Engineering</h3>
+                            <h4>University of Calgary, Main Campus</h4>
+                            <p>Specializing in Power Systems and Sustainable Energy. Developing strong foundational skills in data automation, system optimization, and project management.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-icon">🎓</div>
+                    <div class="timeline-date">2024 - 2026</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content-wrapper right-side">
+                        <div class="timeline-card">
+                            <h3>Project Assistant</h3>
+                            <h4>University Research Centre, SUST, Bangladesh</h4>
+                            <p>Supported the electrical design of an IoT-based solar power system and collaborated with multidisciplinary teams to improve documentation efficiency and coordinate reviews.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-icon">💼</div>
+                    <div class="timeline-date">2022 - 2023</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content-wrapper left-side">
+                        <div class="timeline-card">
+                            <h3>Bachelor of Science in Electrical and Electronic Engineering</h3>
+                            <h4>ShahJalal University of Science & Technology, Bangladesh</h4>
+                            <p>Built a comprehensive base in power systems and circuit analysis. Completed a research-focused thesis on transmission line fault classification utilizing machine learning models.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-icon">🎓</div>
+                    <div class="timeline-date">2022</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content-wrapper right-side">
+                        <div class="timeline-card">
+                            <h3>HSC Completion</h3>
+                            <h4>M.C. College, Sylhet, Bangladesh.</h4>
+                            <p>Passed my intermediate from this college. Some good memories were made here.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-icon">🎓</div>
+                    <div class="timeline-date">2017</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content-wrapper left-side">
+                        <div class="timeline-card">
+                            <h3>SSC Completion</h3>
+                            <h4>Sylhet Government Pilot High School</h4>
+                            <p>My golden days. Studying at an all-boys' high school was a great experience (which I realized after transitioning to a co-ed college).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-icon">🎓</div>
+                    <div class="timeline-date">2015</div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
     <h2>Technical Skills</h2>
 
@@ -367,7 +641,6 @@ footer {
     </div>
 </section>
 
-<!-- PROFESSIONAL DEVELOPMENT -->
 <section id="development">
     <h2>Professional Development</h2>
     <div class="grid">
@@ -415,7 +688,6 @@ footer {
     </div>
 </section>
 
-<!-- CERTIFICATIONS -->
 <section id="certifications">
     <h2>Certifications &amp; Registrations</h2>
     <div class="grid">
@@ -425,29 +697,23 @@ footer {
         </div>
     </div>
 </section>
-<!-- PROJECTS -->
+
 <section id="projects">
     <h2>Projects</h2>
 
     <div class="card">
         <h3>Automated Grid Congestion & Curtailment Tool (AESO)</h3>
-        <p>
-        Developed an automated framework using Python and PSS®E to evaluate system performance under renewable integration and contingency scenarios using historical AESO data.
-        </p>
+        <p>Developed an automated framework using Python and PSS®E to evaluate system performance under renewable integration and contingency scenarios using historical AESO data.</p>
     </div>
 
     <div class="card">
         <h3>DER Interconnection Study & Compliance Analysis</h3>
-        <p>
-        Evaluated the integration of Distributed Energy Resources (DER) into utility networks, ensuring strict compliance with FortisAlberta and IEEE technical standards.
-        </p>
+        <p>Evaluated the integration of Distributed Energy Resources (DER) into utility networks, ensuring strict compliance with FortisAlberta and IEEE technical standards.</p>
     </div>
 
     <div class="card">
         <h3>Transmission Line Fault Classification</h3>
-        <p>
-        Applied machine learning techniques (MLPNN and ensemble methods) to enhance fault detection and classification accuracy in transmission systems.
-        </p>
+        <p>Applied machine learning techniques (MLPNN and ensemble methods) to enhance fault detection and classification accuracy in transmission systems.</p>
     </div>
 
     <p style="text-align: center;">
@@ -455,7 +721,6 @@ footer {
     </p>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
     <h2>Contact</h2>
 

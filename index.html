@@ -121,6 +121,67 @@ h2 {
     margin-bottom: 0;
 }
 
+/* FEATURED PROJECT CARD STYLE */
+.project-tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 14px;
+}
+
+.tag {
+    background: #334155;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.project-card ul {
+    margin: 0 0 18px;
+    padding-left: 20px;
+    color: #475569;
+}
+
+.project-card li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.project-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-sm.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-sm.btn-outline {
+    background: transparent;
+    color: var(--accent);
+    border: 1.5px solid var(--accent);
+}
+
 /* PROFESSIONAL DEVELOPMENT CARDS */
 .dev-tag {
     display: inline-block;
@@ -432,7 +493,7 @@ footer {
     .journey-container .right-side {
         width: 100%;
         left: 0;
-        padding: 0 0 0 0;
+        padding: 0;
     }
 
     .journey-container .timeline-card {
@@ -701,19 +762,59 @@ footer {
 <section id="projects">
     <h2>Projects</h2>
 
-    <div class="card">
+    <div class="card project-card">
         <h3>Automated Grid Congestion & Curtailment Tool (AESO)</h3>
-        <p>Developed an automated framework using Python and PSS®E to evaluate system performance under renewable integration and contingency scenarios using historical AESO data.</p>
+        <div class="project-tools-container">
+            <span class="tag">PSSE</span>
+            <span class="tag">Python</span>
+            <span class="tag">PSSE API</span>
+            <span class="tag">Congestion Studies</span>
+            <span class="tag">Thermal Viloation</span>
+            <span class="tag">Volatge Viloation</span>
+            <span class="tag">Generator Curtailment</span>
+            <span class="tag">Contingency</span>
+        </div>
+        <ul>
+            <li>Automated 8,760-hour AC power flow simulation</li>
+            <li>N-0, N-1 contingency screening with violation detection</li>
+            <li>Apply PSSE ACCOR Function to relief overloads</li>
+        </ul>
+        <div class="project-actions">
+            <a href="https://github.com/Tanbir2/Automated-Grid-Congestion-voltage-violation-Curtailment-Screening-Tool-AESO/tree/main/Scripts" class="btn-sm btn-outline">View Code</a>
+            <a href="https://github.com/Tanbir2/Automated-Grid-Congestion-voltage-violation-Curtailment-Screening-Tool-AESO/blob/main/Final%20Project%20Report.pdf" class="btn-sm btn-primary">Full Project Report →</a>
+        </div>
     </div>
 
-    <div class="card">
+    <div class="card project-card">
         <h3>DER Interconnection Study & Compliance Analysis</h3>
-        <p>Evaluated the integration of Distributed Energy Resources (DER) into utility networks, ensuring strict compliance with FortisAlberta and IEEE technical standards.</p>
+        <div class="project-tools-container">
+            <span class="tag">ETAP</span>
+            <span class="tag">Excel</span>
+        </div>
+        <ul>
+            <li>Reliability impact evaluation for utility distribution networks</li>
+            <li>Short-circuit and grounding studies per IEEE 1547-2018</li>
+        </ul>
+        <div class="project-actions">
+            <a href="#" class="btn-sm btn-primary">Full Project Report →</a>
+        </div>
     </div>
 
-    <div class="card">
-        <h3>Transmission Line Fault Classification</h3>
-        <p>Applied machine learning techniques (MLPNN and ensemble methods) to enhance fault detection and classification accuracy in transmission systems.</p>
+    <div class="card project-card">
+        <h3>Transmission Line Fault Detection & Classification</h3>
+        <div class="project-tools-container">
+            <span class="tag">MATLAB</span>
+            <span class="tag">Simulink</span>
+            <span class="tag">CatBoost</span>
+        </div>
+        <ul>
+            <li>Simulink-based transmission line fault transient modeling</li>
+            <li>Machine learning classifier with 99% detection accuracy</li>
+        </ul>
+        <div class="project-actions">
+            <a href="#" class="btn-sm btn-outline">View Code</a>
+            <a href="#" class="btn-sm btn-primary">Full Project Report →</a>
+        </div>
     </div>
 
     <p style="text-align: center;">
